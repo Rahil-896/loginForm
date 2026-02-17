@@ -1,4 +1,4 @@
-# react-auth-forms
+# react-authform
 
 > Beautiful, accessible, zero-dependency Login and Sign-Up form components for React.
 
@@ -21,13 +21,13 @@
 ## Installation
 
 ```bash
-npm install react-auth-forms
+npm install react-authform
 ```
 
 or with Yarn:
 
 ```bash
-yarn add react-auth-forms
+yarn add react-authform
 ```
 
 ---
@@ -38,7 +38,7 @@ yarn add react-auth-forms
 
 ```jsx
 import { useState } from 'react';
-import { AuthForms } from 'react-auth-forms';
+import { AuthForms } from 'react-authform';
 
 export default function App() {
   const [showAuth, setShowAuth] = useState(false);
@@ -71,7 +71,7 @@ export default function App() {
 ### Login Form only
 
 ```jsx
-import { LoginForm } from 'react-auth-forms';
+import { LoginForm } from 'react-authform';
 
 <LoginForm
   onLogin={async ({ email, password }) => {
@@ -87,7 +87,7 @@ import { LoginForm } from 'react-auth-forms';
 ### Sign-Up Form only
 
 ```jsx
-import { SignUpForm } from 'react-auth-forms';
+import { SignUpForm } from 'react-authform';
 
 <SignUpForm
   onSignUp={async ({ firstName, lastName, email, password }) => {

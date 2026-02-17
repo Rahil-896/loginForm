@@ -1,5 +1,5 @@
 {
-  "name": "react-auth-forms",
+  "name": "react-authform",
   "version": "1.0.0",
   "description": "Beautiful, ready-to-use Login and SignUp form components for React",
   "main": "dist/index.js",
@@ -40,9 +40,5 @@
     "components"
   ],
   "author": "",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/yourusername/react-auth-forms"
-  }
+  "license": "MIT"
 }
