@@ -1,6 +1,6 @@
 {
   "name": "react-signup-form",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Beautiful, ready-to-use Login and SignUp form components for React",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
