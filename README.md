@@ -189,23 +189,8 @@ Set `overlay={false}` to render just the card without the dark background:
 
 ---
 
-## Development / Building the Package
-
-```bash
-git clone https://github.com/yourusername/react-auth-forms
-cd react-auth-forms
-npm install
-npm run build   # outputs to dist/
-```
-
-To publish to npm:
-
-```bash
-npm login
-npm publish
-```
-
----
+## Development
+npm install react-auth-forms
 
 ## License
 
