@@ -256,7 +256,7 @@ export function LoginForm({
                   Signing in...
                 </>
               ) : (
-                { buttonText }
+                buttonText
               )}
             </button>
           </form>
