@@ -186,6 +186,3 @@ Set `overlay={false}` to render just the card without the dark background:
   <LoginForm overlay={false} onLogin={handleLogin} />
 </div>
 ```
-
----
-git clone https://github.com/Rahil-896/loginForm.git
