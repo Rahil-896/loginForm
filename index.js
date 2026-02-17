@@ -1,3 +1,5 @@
-export { LoginForm } from './components/LoginForm';
-export { SignUpForm } from './components/SignUpForm';
-export { AuthForms } from './components/AuthForms';
+import './styles/auth.css';
+
+export { LoginForm } from './LoginForm';
+export { SignUpForm } from './SignUpForm';
+export { AuthForms } from './AuthForms';

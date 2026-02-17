@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import '../styles/auth.css';
+import { useState } from 'react';
 
 const MailIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"

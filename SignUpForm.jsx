@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import '../styles/auth.css';
+import { useState } from 'react';
 
 /* ── Icons ── */
 const MailIcon = () => (
