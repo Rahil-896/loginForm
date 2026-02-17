@@ -160,28 +160,30 @@ export function LoginForm({
         </div>
       ) : (
         <>
-          <div className="raf-logo">
-            {logoSrc ? (
-              <img src={logoSrc} alt="Logo" style={{ width: 28, height: 28, objectFit: 'contain' }} />
-            ) : (
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z" />
-              </svg>
-            )}
-          </div>
+          <div style={{textAlign:'center'}}>
+            <div className="raf-logo">
+              {logoSrc ? (
+                <img src={logoSrc} alt="Logo" style={{ width: 28, height: 28, objectFit: 'contain' }} />
+              ) : (
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z" />
+                </svg>
+              )}
+            </div>
 
-          <h2 className="raf-title">{title}</h2>
-          <p className="raf-subtitle">
-            Don't have an account?{' '}
-            {onSwitchToSignUp ? (
-              <span onClick={onSwitchToSignUp} role="button" tabIndex={0}
-                onKeyDown={e => e.key === 'Enter' && onSwitchToSignUp()}>
-                Sign up
-              </span>
-            ) : (
-              <span>Sign up</span>
-            )}
-          </p>
+            <h2 className="raf-title">{title}</h2>
+            <p className="raf-subtitle">
+              Don't have an account?{' '}
+              {onSwitchToSignUp ? (
+                <span onClick={onSwitchToSignUp} role="button" tabIndex={0}
+                  onKeyDown={e => e.key === 'Enter' && onSwitchToSignUp()}>
+                  Sign up
+                </span>
+              ) : (
+                <span>Sign up</span>
+              )}
+            </p>
+          </div>
 
           {externalError && (
             <div className="raf-global-error" style={{ marginBottom: 16 }}>
