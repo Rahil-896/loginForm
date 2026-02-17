@@ -222,7 +222,7 @@
   margin-top: -8px;
 }
 
-.raf-forgot-btn {
+.raf-forgot-link {
   font-size: 13px;
   color: #6366f1;
   font-weight: 500;
@@ -231,10 +231,19 @@
   cursor: pointer;
   font-family: inherit;
   padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.15s ease;
 }
 
-.raf-forgot-btn:hover {
-  text-decoration: underline;
+.raf-forgot-link:hover {
+  color: #4f46e5;
+}
+
+.raf-forgot-link:focus-visible {
+  outline: 2px solid rgba(99, 102, 241, 0.35);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
 .raf-submit-btn {
