@@ -21,6 +21,7 @@ import { SignUpForm } from './SignUpForm';
  *   showConfirmPassword   – show confirm password in signup (default: true)
  *   showTerms             – show terms checkbox (default: true)
  *   showStrength          – show password strength (default: true)
+ *   position              – header alignment for both forms: "left" | "center" | "right" (default: "left")
  */
 export function AuthForms({
   initialView = 'login',
@@ -38,6 +39,7 @@ export function AuthForms({
   showConfirmPassword = true,
   showTerms = true,
   showStrength = true,
+  position = 'left',
 }) {
   const [view, setView] = useState(initialView);
 
@@ -52,6 +54,7 @@ export function AuthForms({
         error={loginError}
         overlay={overlay}
         logoSrc={logoSrc}
+        position={position}
       />
     );
   }
@@ -69,6 +72,7 @@ export function AuthForms({
       showConfirmPassword={showConfirmPassword}
       showTerms={showTerms}
       showStrength={showStrength}
+      position={position}
     />
   );
 }

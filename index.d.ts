@@ -21,6 +21,8 @@ export interface LoginFormProps {
   title?: string;
   /** Submit button text (default: "Sign in") */
   buttonText?: string;
+  /** Header alignment (default: "left") */
+  position?: 'left' | 'center' | 'right';
 }
 
 export interface SignUpFormProps {
@@ -55,6 +57,8 @@ export interface SignUpFormProps {
   title?: string;
   /** Submit button text (default: "Create account") */
   buttonText?: string;
+  /** Header alignment (default: "left") */
+  position?: 'left' | 'center' | 'right';
 }
 
 export interface AuthFormsProps {
@@ -88,6 +92,8 @@ export interface AuthFormsProps {
   showTerms?: boolean;
   /** Show password strength (default: true) */
   showStrength?: boolean;
+  /** Header alignment for both forms (default: "left") */
+  position?: 'left' | 'center' | 'right';
 }
 
 export declare const LoginForm: FC<LoginFormProps>;

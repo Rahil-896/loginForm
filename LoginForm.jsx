@@ -95,6 +95,7 @@ function validate(fields) {
  *   logoSrc               – custom logo image URL (optional, uses default icon if omitted)
  *   title                 – heading text (default: "Welcome back")
  *   buttonText            – submit button label (default: "Sign in")
+ *   position              – header alignment: "left" | "center" | "right" (default: "left")
  */
 export function LoginForm({
   onLogin,
@@ -107,6 +108,7 @@ export function LoginForm({
   logoSrc,
   title = 'Welcome back',
   buttonText = 'Sign in',
+  position = 'left',
 }) {
   const [fields, setFields] = useState({ email: '', password: '' });
   const [errors, setErrors] = useState({});
@@ -160,7 +162,11 @@ export function LoginForm({
         </div>
       ) : (
         <>
-          <div style={{textAlign:'center'}}>
+          <div className={`raf-header ${position === 'center'
+            ? 'raf-header-center'
+            : position === 'right'
+              ? 'raf-header-right'
+              : 'raf-header-left'}`}>
             <div className="raf-logo">
               {logoSrc ? (
                 <img src={logoSrc} alt="Logo" style={{ width: 28, height: 28, objectFit: 'contain' }} />

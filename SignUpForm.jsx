@@ -126,6 +126,7 @@ function validate(fields, showLastName) {
  *   logoSrc                  – custom logo image URL (optional)
  *   title                    – heading text (default: "Create an account")
  *   buttonText               – submit button label (default: "Create account")
+ *   position                 – header alignment: "left" | "center" | "right" (default: "left")
  */
 export function SignUpForm({
   onSignUp,
@@ -141,6 +142,7 @@ export function SignUpForm({
   logoSrc,
   title = 'Create an account',
   buttonText = 'Create account',
+  position = 'left',
 }) {
   const [fields, setFields] = useState({
     firstName: '',
@@ -222,28 +224,34 @@ export function SignUpForm({
         </div>
       ) : (
         <>
-          <div className="raf-logo">
-            {logoSrc ? (
-              <img src={logoSrc} alt="Logo" style={{ width: 28, height: 28, objectFit: 'contain' }} />
-            ) : (
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/>
-              </svg>
-            )}
-          </div>
+          <div className={`raf-header ${position === 'center'
+            ? 'raf-header-center'
+            : position === 'right'
+              ? 'raf-header-right'
+              : 'raf-header-left'}`}>
+            <div className="raf-logo">
+              {logoSrc ? (
+                <img src={logoSrc} alt="Logo" style={{ width: 28, height: 28, objectFit: 'contain' }} />
+              ) : (
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/>
+                </svg>
+              )}
+            </div>
 
-          <h2 className="raf-title">{title}</h2>
-          <p className="raf-subtitle">
-            Already have an account?{' '}
-            {onSwitchToLogin ? (
-              <span onClick={onSwitchToLogin} role="button" tabIndex={0}
-                onKeyDown={e => e.key === 'Enter' && onSwitchToLogin()}>
-                Sign in
-              </span>
-            ) : (
-              <span>Sign in</span>
-            )}
-          </p>
+            <h2 className="raf-title">{title}</h2>
+            <p className="raf-subtitle">
+              Already have an account?{' '}
+              {onSwitchToLogin ? (
+                <span onClick={onSwitchToLogin} role="button" tabIndex={0}
+                  onKeyDown={e => e.key === 'Enter' && onSwitchToLogin()}>
+                  Sign in
+                </span>
+              ) : (
+                <span>Sign in</span>
+              )}
+            </p>
+          </div>
 
           {externalError && (
             <div className="raf-global-error" style={{ marginBottom: 16 }}>

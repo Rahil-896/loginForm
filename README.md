@@ -116,6 +116,7 @@ import { SignUpForm } from 'react-signup-form';
 | `logoSrc` | `string` | — | Custom logo image URL |
 | `title` | `string` | `"Welcome back"` | Form heading |
 | `buttonText` | `string` | `"Sign in"` | Submit button label |
+| `position` | `'left' \| 'center' \| 'right'` | `'left'` | Aligns login header content |
 
 ### `<SignUpForm />`
 
@@ -134,6 +135,7 @@ import { SignUpForm } from 'react-signup-form';
 | `logoSrc` | `string` | — | Custom logo image URL |
 | `title` | `string` | `"Create an account"` | Form heading |
 | `buttonText` | `string` | `"Create account"` | Submit button label |
+| `position` | `'left' \| 'center' \| 'right'` | `'left'` | Aligns sign-up header content |
 
 ### `<AuthForms />`
 
@@ -146,6 +148,7 @@ Accepts all props from both forms above, plus:
 | `signUpError` | `string` | — | Error for signup form |
 | `loginLoading` | `boolean` | — | Loading for login |
 | `signUpLoading` | `boolean` | — | Loading for signup |
+| `position` | `'left' \| 'center' \| 'right'` | `'left'` | Aligns header content in both forms |
 
 ---
 
