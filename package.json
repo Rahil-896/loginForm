@@ -1,0 +1,44 @@
+{
+  "name": "react-auth-forms",
+  "version": "1.0.0",
+  "description": "Beautiful, ready-to-use Login and SignUp form components for React",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c --watch",
+    "lint": "eslint src/**/*.{js,jsx}"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.0",
+    "react-dom": ">=17.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@rollup/plugin-terser": "^0.4.0",
+    "rollup": "^3.0.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2"
+  },
+  "keywords": [
+    "react",
+    "auth",
+    "login",
+    "signup",
+    "signin",
+    "form",
+    "authentication",
+    "components"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/react-auth-forms"
+  }
+}
