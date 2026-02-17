@@ -1,4 +1,4 @@
-# react-login-form
+# react-signup-form
 
 > Beautiful, accessible, zero-dependency Login and Sign-Up form components for React.
 
@@ -21,13 +21,13 @@
 ## Installation
 
 ```bash
-npm install react-login-form
+npm install react-signup-form
 ```
 
 or with Yarn:
 
 ```bash
-yarn add react-login-form
+yarn add react-signup-form
 ```
 
 ---
@@ -38,7 +38,7 @@ yarn add react-login-form
 
 ```jsx
 import { useState } from 'react';
-import { AuthForms } from 'react-login-form';
+import { AuthForms } from 'react-signup-form';
 
 export default function App() {
   const [showAuth, setShowAuth] = useState(false);
@@ -71,7 +71,7 @@ export default function App() {
 ### Login Form only
 
 ```jsx
-import { LoginForm } from 'react-login-form';
+import { LoginForm } from 'react-signup-form';
 
 <LoginForm
   onLogin={async ({ email, password }) => {
@@ -87,7 +87,7 @@ import { LoginForm } from 'react-login-form';
 ### Sign-Up Form only
 
 ```jsx
-import { SignUpForm } from 'react-login-form';
+import { SignUpForm } from 'react-signup-form';
 
 <SignUpForm
   onSignUp={async ({ firstName, lastName, email, password }) => {
