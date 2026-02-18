@@ -22,6 +22,8 @@ import { SignUpForm } from './SignUpForm';
  *   showTerms             – show terms checkbox (default: true)
  *   showStrength          – show password strength (default: true)
  *   position              – header alignment for both forms: "left" | "center" | "right" (default: "left")
+ *   className             – class name added to `.raf-card` in both forms
+ *   overlayClassName      – class name added to `.raf-overlay` in both forms
  */
 export function AuthForms({
   initialView = 'login',
@@ -40,6 +42,8 @@ export function AuthForms({
   showTerms = true,
   showStrength = true,
   position = 'left',
+  className,
+  overlayClassName,
 }) {
   const [view, setView] = useState(initialView);
 
@@ -55,6 +59,8 @@ export function AuthForms({
         overlay={overlay}
         logoSrc={logoSrc}
         position={position}
+        className={className}
+        overlayClassName={overlayClassName}
       />
     );
   }
@@ -73,6 +79,8 @@ export function AuthForms({
       showTerms={showTerms}
       showStrength={showStrength}
       position={position}
+      className={className}
+      overlayClassName={overlayClassName}
     />
   );
 }

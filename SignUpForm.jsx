@@ -127,6 +127,8 @@ function validate(fields, showLastName) {
  *   title                    – heading text (default: "Create an account")
  *   buttonText               – submit button label (default: "Create account")
  *   position                 – header alignment: "left" | "center" | "right" (default: "left")
+ *   className                – class name added to `.raf-card` for custom CSS overrides
+ *   overlayClassName         – class name added to `.raf-overlay` when overlay is enabled
  */
 export function SignUpForm({
   onSignUp,
@@ -143,6 +145,8 @@ export function SignUpForm({
   title = 'Create an account',
   buttonText = 'Create account',
   position = 'left',
+  className = '',
+  overlayClassName = '',
 }) {
   const [fields, setFields] = useState({
     firstName: '',
@@ -209,7 +213,7 @@ export function SignUpForm({
   }
 
   const card = (
-    <div className="raf-card" role="dialog" aria-modal="true" aria-label="Sign up form">
+    <div className={`raf-card ${className}`.trim()} role="dialog" aria-modal="true" aria-label="Sign up form">
       {onClose && (
         <button className="raf-close-btn" onClick={onClose} aria-label="Close">
           <CloseIcon />
@@ -439,7 +443,10 @@ export function SignUpForm({
   if (!overlay) return card;
 
   return (
-    <div className="raf-overlay" onClick={e => { if (e.target === e.currentTarget && onClose) onClose(); }}>
+    <div
+      className={`raf-overlay ${overlayClassName}`.trim()}
+      onClick={e => { if (e.target === e.currentTarget && onClose) onClose(); }}
+    >
       {card}
     </div>
   );

@@ -96,6 +96,8 @@ function validate(fields) {
  *   title                 – heading text (default: "Welcome back")
  *   buttonText            – submit button label (default: "Sign in")
  *   position              – header alignment: "left" | "center" | "right" (default: "left")
+ *   className             – class name added to `.raf-card` for custom CSS overrides
+ *   overlayClassName      – class name added to `.raf-overlay` when overlay is enabled
  */
 export function LoginForm({
   onLogin,
@@ -109,6 +111,8 @@ export function LoginForm({
   title = 'Welcome back',
   buttonText = 'Sign in',
   position = 'left',
+  className = '',
+  overlayClassName = '',
 }) {
   const [fields, setFields] = useState({ email: '', password: '' });
   const [errors, setErrors] = useState({});
@@ -147,7 +151,7 @@ export function LoginForm({
   }
 
   const card = (
-    <div className="raf-card" role="dialog" aria-modal="true" aria-label="Login form">
+    <div className={`raf-card ${className}`.trim()} role="dialog" aria-modal="true" aria-label="Login form">
       {onClose && (
         <button className="raf-close-btn" onClick={onClose} aria-label="Close">
           <CloseIcon />
@@ -276,7 +280,10 @@ export function LoginForm({
   if (!overlay) return card;
 
   return (
-    <div className="raf-overlay" onClick={e => { if (e.target === e.currentTarget && onClose) onClose(); }}>
+    <div
+      className={`raf-overlay ${overlayClassName}`.trim()}
+      onClick={e => { if (e.target === e.currentTarget && onClose) onClose(); }}
+    >
       {card}
     </div>
   );

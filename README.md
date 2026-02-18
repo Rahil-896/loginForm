@@ -117,6 +117,8 @@ import { SignUpForm } from 'react-signup-form';
 | `title` | `string` | `"Welcome back"` | Form heading |
 | `buttonText` | `string` | `"Sign in"` | Submit button label |
 | `position` | `'left' \| 'center' \| 'right'` | `'left'` | Aligns login header content |
+| `className` | `string` | — | Added to `.raf-card` so you can target your own overrides |
+| `overlayClassName` | `string` | — | Added to `.raf-overlay` when `overlay` is `true` |
 
 ### `<SignUpForm />`
 
@@ -136,6 +138,8 @@ import { SignUpForm } from 'react-signup-form';
 | `title` | `string` | `"Create an account"` | Form heading |
 | `buttonText` | `string` | `"Create account"` | Submit button label |
 | `position` | `'left' \| 'center' \| 'right'` | `'left'` | Aligns sign-up header content |
+| `className` | `string` | — | Added to `.raf-card` so you can target your own overrides |
+| `overlayClassName` | `string` | — | Added to `.raf-overlay` when `overlay` is `true` |
 
 ### `<AuthForms />`
 
@@ -149,6 +153,8 @@ Accepts all props from both forms above, plus:
 | `loginLoading` | `boolean` | — | Loading for login |
 | `signUpLoading` | `boolean` | — | Loading for signup |
 | `position` | `'left' \| 'center' \| 'right'` | `'left'` | Aligns header content in both forms |
+| `className` | `string` | — | Added to `.raf-card` in both views |
+| `overlayClassName` | `string` | — | Added to `.raf-overlay` in both views when overlay is enabled |
 
 ---
 
@@ -188,4 +194,34 @@ Set `overlay={false}` to render just the card without the dark background:
 <div style={{ display: 'flex', justifyContent: 'center', padding: 40 }}>
   <LoginForm overlay={false} onLogin={handleLogin} />
 </div>
+```
+
+---
+
+## CSS Overrides
+
+Use `className` / `overlayClassName` to attach your own selectors and override defaults:
+
+```jsx
+<LoginForm
+  className="my-login"
+  overlayClassName="my-login-overlay"
+  onLogin={handleLogin}
+/>
+```
+
+```css
+.my-login.raf-card {
+  max-width: 520px;
+  border-radius: 24px;
+}
+
+.my-login .raf-submit-btn {
+  background: #111827;
+  box-shadow: none;
+}
+
+.my-login-overlay.raf-overlay {
+  background: rgba(0, 0, 0, 0.75);
+}
 ```

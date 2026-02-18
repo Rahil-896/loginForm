@@ -23,6 +23,10 @@ export interface LoginFormProps {
   buttonText?: string;
   /** Header alignment (default: "left") */
   position?: 'left' | 'center' | 'right';
+  /** Class name added to `.raf-card` for custom CSS overrides */
+  className?: string;
+  /** Class name added to `.raf-overlay` when overlay is enabled */
+  overlayClassName?: string;
 }
 
 export interface SignUpFormProps {
@@ -59,6 +63,10 @@ export interface SignUpFormProps {
   buttonText?: string;
   /** Header alignment (default: "left") */
   position?: 'left' | 'center' | 'right';
+  /** Class name added to `.raf-card` for custom CSS overrides */
+  className?: string;
+  /** Class name added to `.raf-overlay` when overlay is enabled */
+  overlayClassName?: string;
 }
 
 export interface AuthFormsProps {
@@ -94,6 +102,10 @@ export interface AuthFormsProps {
   showStrength?: boolean;
   /** Header alignment for both forms (default: "left") */
   position?: 'left' | 'center' | 'right';
+  /** Class name added to `.raf-card` in both forms */
+  className?: string;
+  /** Class name added to `.raf-overlay` in both forms */
+  overlayClassName?: string;
 }
 
 export declare const LoginForm: FC<LoginFormProps>;
